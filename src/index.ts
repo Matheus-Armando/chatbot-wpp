@@ -2,7 +2,7 @@ import { Client, LocalAuth, Message, MessageMedia } from 'whatsapp-web.js';
 import generateImage from './utils/imageGenerator';
 import { getAllCommands, getFaqAnswer, getFaqByCategory } from './utils/faq';
 
-const messageDelay = 5000;
+const messageDelay = 1000;
 const maxMessagesPerHour = 100;
 let messageCount = 0;
 let lastMessageTime = 0;
