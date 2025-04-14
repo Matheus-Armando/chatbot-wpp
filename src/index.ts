@@ -1,8 +1,8 @@
 import { Client, LocalAuth, Message, MessageMedia } from 'whatsapp-web.js';
-import generateImage from './utils/imageGenerator';
+import generateImage, { generateSpecialLk } from './utils/imageGenerator';
 import { getAllCommands, getFaqAnswer, getFaqByCategory } from './utils/faq';
 
-const messageDelay = 1000;
+const messageDelay = 100;
 const maxMessagesPerHour = 100;
 let messageCount = 0;
 let lastMessageTime = 0;
@@ -86,10 +86,38 @@ client.on('message', async (message: Message) => {
         message.reply('pong');
     }
 
-    if (message.body === '!bomdia') {
-        const imageBuffer = await generateImage();
-        const media = new MessageMedia('image/png', imageBuffer.toString('base64'));
-        await message.reply(media, undefined, { caption: 'Bom dia!' });
+    if (message.body.startsWith('!bomdia')) {
+        try {
+            const args = message.body.split(' ');
+            const imageBuffer = await generateImage({
+                category: args[1],
+                width: 800,
+                height: 400
+            });
+            
+            const media = new MessageMedia('image/jpeg', imageBuffer.toString('base64'));
+            await message.reply(media, undefined, { 
+                caption: '🌅 Bom dia!' 
+            });
+        } catch (error) {
+            console.error('Erro:', error);
+            await message.reply('Desculpe, não consegui gerar a imagem. Tente novamente!');
+        }
+        return;
+    }
+
+    if (message.body === '!lk') {
+        try {
+            const imageBuffer = await generateSpecialLk();
+            const media = new MessageMedia('image/jpeg', imageBuffer.toString('base64'));
+            await message.reply(media, undefined, { 
+                caption: '🐒 Lk D Amaterasu 🙈'
+            });
+        } catch (error) {
+            console.error('Erro:', error);
+            await message.reply('Erro ao gerar imagem especial.');
+        }
+        return;
     }
 
     const faqAnswer = getFaqAnswer(message.body);
