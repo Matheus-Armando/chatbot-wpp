@@ -77,7 +77,34 @@ async function generateImage(options?: ImageGeneratorOptions): Promise<Buffer> {
         
         ctx.font = '32px Arial';
         const day = moment().format('dddd');
-        ctx.fillText(`Tenha ${day === 'sábado' || day === 'domingo' ? 'um ótimo' : 'uma ótima'} ${day}!`, 400, 200);
+        let translatedDay = day;
+        switch (day) {
+            case 'Monday':
+                translatedDay = 'segunda-feira';
+                break;
+            case 'Tuesday':
+                translatedDay = 'terça-feira';
+                break;
+            case 'Wednesday':
+                translatedDay = 'quarta-feira';
+                break;
+            case 'Thursday':
+                translatedDay = 'quinta-feira';
+                break;
+            case 'Friday':
+                translatedDay = 'sexta-feira';
+                break;
+            case 'Saturday':
+                translatedDay = 'sábado';
+                break;
+            case 'Sunday':
+                translatedDay = 'domingo';
+                break;
+            default:
+                translatedDay = 'dia desconhecido';
+                break;
+        }
+        ctx.fillText(`Tenha ${translatedDay === 'sábado' || translatedDay === 'domingo' ? 'um ótimo' : 'uma ótima'} ${translatedDay}!`, 400, 200);
 
         return canvas.toBuffer('image/jpeg');
     } catch (error) {
