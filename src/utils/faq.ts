@@ -19,6 +19,12 @@ const faqList: FaqItem[] = [
       category: 'básico'
   },
   {
+    command: '!chamada',
+    question: 'Como enviar mensagem de voz?',
+    answer: 'Clique no ícone de telefone (📞) e selecione "Chamada de voz" ou "Chamada de vídeo".',
+    category: 'básico'
+  },
+  {
       command: '!grupo',
       question: 'Como criar um grupo?',
       answer: 'Clique nos 3 pontos > "Novo grupo" > Selecione os participantes > Digite o nome do grupo > Clique em ✓',
@@ -29,6 +35,48 @@ const faqList: FaqItem[] = [
       question: 'Como postar um status?',
       answer: 'Vá para a aba "Status" > Toque em "Meu status" > Escolha foto ou texto > Compartilhe',
       category: 'intermediário'
+  },
+  {
+    command: '!localizacao',
+    question: 'Como enviar localização?',
+    answer: 'Clique no ícone de clipe (📎) > Selecione "Localização" > Escolha entre "Enviar localização atual" ou "Compartilhar localização em tempo real".',
+    category: 'intermediário',
+  },
+  {
+    command: '!contato',
+    question: 'Como enviar um contato?',
+    answer: 'Clique no ícone de clipe (📎) > Selecione "Contato" > Escolha o contato desejado > Clique em "Enviar".',
+    category: 'intermediário',
+  },
+  {
+    command: '!apagarmensagem',
+    question: 'Como apagar mensagem?',
+    answer: 'Pressione e segure a mensagem > Clique no ícone de lixeira > Escolha "Apagar para mim" ou "Apagar para todos".',
+    category: 'intermediário'
+  },
+  {
+    command: '!letra',
+    question: 'Como aumentar o tamanho das letras?',
+    answer: 'Vá para Configurações > Conversas > Tamanho da fonte. Escolha entre Pequena, Média ou Grande.',
+    category: 'intermediário'
+  },
+  {
+      command: '!notificacoes',
+      question: 'Como configurar notificações?',
+      answer: 'Configurações > Notificações. Aqui você pode personalizar sons, vibrações e pop-ups.',
+      category: 'avançado'
+  },
+  {
+      command: '!bloquear',
+      question: 'Como bloquear um contato?',
+      answer: 'Abra o chat do contato > Clique nos 3 pontos > "Bloquear contato".',
+      category: 'avançado'
+  },
+  {
+      command: '!desbloquear',
+      question: 'Como desbloquear um contato?',
+      answer: 'Configurações > Conta > Privacidade > Bloqueados. Selecione o contato e clique em "Desbloquear".',
+      category: 'avançado'
   },
   {
       command: '!backup',
