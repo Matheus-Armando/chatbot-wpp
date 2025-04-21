@@ -7,85 +7,85 @@ interface FaqItem {
 
 const faqList: FaqItem[] = [
   {
-      command: '!audio',
+      command: '!1',
       question: 'Como enviar mensagem de áudio?',
       answer: 'Para gravar um áudio, pressione e segure o ícone do microfone. Para enviar, solte o botão. Para cancelar, arraste para o lado.',
       category: 'básico'
   },
   {
-      command: '!foto',
+      command: '!2',
       question: 'Como enviar fotos?',
       answer: 'Clique no ícone de clipe (📎) e selecione "Galeria" ou "Câmera" para enviar uma foto.',
       category: 'básico'
   },
   {
-    command: '!chamada',
+    command: '!3',
     question: 'Como enviar mensagem de voz?',
     answer: 'Clique no ícone de telefone (📞) e selecione "Chamada de voz" ou "Chamada de vídeo".',
     category: 'básico'
   },
   {
-      command: '!grupo',
+      command: '!4',
       question: 'Como criar um grupo?',
       answer: 'Clique nos 3 pontos > "Novo grupo" > Selecione os participantes > Digite o nome do grupo > Clique em ✓',
       category: 'intermediário'
   },
   {
-      command: '!status',
+      command: '!5',
       question: 'Como postar um status?',
       answer: 'Vá para a aba "Status" > Toque em "Meu status" > Escolha foto ou texto > Compartilhe',
       category: 'intermediário'
   },
   {
-    command: '!localizacao',
+    command: '!6',
     question: 'Como enviar localização?',
     answer: 'Clique no ícone de clipe (📎) > Selecione "Localização" > Escolha entre "Enviar localização atual" ou "Compartilhar localização em tempo real".',
     category: 'intermediário',
   },
   {
-    command: '!contato',
+    command: '!7',
     question: 'Como enviar um contato?',
     answer: 'Clique no ícone de clipe (📎) > Selecione "Contato" > Escolha o contato desejado > Clique em "Enviar".',
     category: 'intermediário',
   },
   {
-    command: '!apagarmensagem',
+    command: '!8',
     question: 'Como apagar mensagem?',
     answer: 'Pressione e segure a mensagem > Clique no ícone de lixeira > Escolha "Apagar para mim" ou "Apagar para todos".',
     category: 'intermediário'
   },
   {
-    command: '!letra',
+    command: '!9',
     question: 'Como aumentar o tamanho das letras?',
     answer: 'Vá para Configurações > Conversas > Tamanho da fonte. Escolha entre Pequena, Média ou Grande.',
     category: 'intermediário'
   },
   {
-      command: '!notificacoes',
+      command: '!10',
       question: 'Como configurar notificações?',
       answer: 'Configurações > Notificações. Aqui você pode personalizar sons, vibrações e pop-ups.',
       category: 'avançado'
   },
   {
-      command: '!bloquear',
+      command: '!11',
       question: 'Como bloquear um contato?',
       answer: 'Abra o chat do contato > Clique nos 3 pontos > "Bloquear contato".',
       category: 'avançado'
   },
   {
-      command: '!desbloquear',
+      command: '!12',
       question: 'Como desbloquear um contato?',
       answer: 'Configurações > Conta > Privacidade > Bloqueados. Selecione o contato e clique em "Desbloquear".',
       category: 'avançado'
   },
   {
-      command: '!backup',
+      command: '!13',
       question: 'Como fazer backup das conversas?',
       answer: 'Configurações > Conversas > Backup de conversas > FAZER BACKUP',
       category: 'avançado'
   },
   {
-      command: '!privacidade',
+      command: '!14',
       question: 'Como configurar privacidade?',
       answer: 'Configurações > Conta > Privacidade. Aqui você pode configurar quem vê: última vez, foto, status e mais.',
       category: 'avançado'
